@@ -1,0 +1,8 @@
+sudo: required
+dist: trusty
+group: edge
+before_install:
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full python-pygments
+script:
+- chmod +x utils/check_naumann_english.sh
+- utils/check_naumann_english.sh
