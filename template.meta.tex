@@ -1,0 +1,53 @@
+% existing authors list --------------------------------------------------------
+\IfFileExists{global-do-not-edit.authors.tex}{\input{global-do-not-edit.authors.tex}}{} % chktex 27
+% ------------------------------------------------------------------------------
+
+% meta data --------------------------------------------------------------------
+\newcommand{\metaTitle}{Industrial Edge Computing\texorpdfstring{\\}{ }Vision and Challenges}
+\newcommand{\metaTitleShort}{Nice Short Title}
+\newcommand{\metaConference}{Conference Name}
+\newcommand{\metaConferenceArea}{Conference Area}
+\newcommand{\metaKeywords}{edge computing, IIoT}
+% ------------------------------------------------------------------------------
+
+% authors ----------------------------------------------------------------------
+\newcommand{\metaAuthorFirst}{Lars Lange}
+\newcommand{\metaMailFirst}{lars.lange.1@campus.tu-berlin.de}
+\newcommand{\metaInstFirst}{Technical University Berlin, Berlin, Germany,\\Next Generation Networks}
+
+\newcommand{\metaAuthorSecond}{Lukas A. Renner}
+\newcommand{\metaMailSecond}{l.renner@campus.tu-berlin.de}
+\newcommand{\metaInstSecond}{Technical University Berlin, Berlin, Germany,\\Next Generation Networks}
+
+\newcommand{\metaAuthorThird}{Ula Stupałkowska}
+\newcommand{\metaMailThird}{placeholder}
+\newcommand{\metaInstThird}{Technical University Berlin, Berlin, Germany,\\Next Generation Networks}
+% ------------------------------------------------------------------------------
+
+% author PDF -------------------------------------------------------------------
+\newcommand{\metaAuthorMail}{\metaMailFirst}
+\newcommand{\metaAuthorShort}{\metaAuthorFirst}
+% ------------------------------------------------------------------------------
+
+% author IEEE ------------------------------------------------------------------
+%\newcommand{\IEEEinstFirst}{\IEEEauthorblockA{\metaInstFirst}} % enable for IEEE style
+%\newcommand{\IEEEauthorFirst}{\IEEEauthorblockN{\metaAuthorFirst}\IEEEinstFirst} % enable for IEEE style
+%\newcommand{\IEEEinstXXX}{\IEEEauthorblockA{\metaInstXXX}} % enable for IEEE style
+%\newcommand{\IEEEauthorXXX}{\IEEEauthorblockN{\metaAuthorXXX}\metaInstXXX} % enable for IEEE style
+%\author{\IEEEauthorFirst~\and \IEEEauthorXXX} % enable for IEEE style
+% ------------------------------------------------------------------------------
+
+% author LLNCS -----------------------------------------------------------------
+\author{\metaAuthorFirst \inst{1}, \metaAuthorSecond \inst{2} \and \metaAuthorThird \inst{3}} % enable for LLNCS style
+\authorrunning{\metaAuthorFirst, \metaAuthorSecond, \metaAuthorThird} % enable for LLNCS style
+\tocauthor{\metaAuthorFirst, \metaAuthorSecond, \metaAuthorThird} % enable for LLNCS style
+\institute{\metaInstFirst\\ % enable for LLNCS style
+\email{\metaMailFirst} \inst{1} \\ % enable for LLNCS style
+\email{\metaMailSecond} \inst{2} \\ % enable for LLNCS style
+\email{\metaMailThird} \inst{3} \\ % enable for LLNCS style
+} % enable for LLNCS style
+\titlerunning{\metaTitleShort} % enable for LLNCS style
+% ------------------------------------------------------------------------------
+
+\newcommand{\metaSubject}{\metaConference~-~\metaConferenceArea} 
+% ------------------------------------------------------------------------------
