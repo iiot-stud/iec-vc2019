@@ -1,11 +1,60 @@
 \section{Current Challenges}\label{sec:main}
 
-\todo {- Architecture: Deal with data explosion, network traffic > scalability, latency, data abstraction}
+\subsection{Architecture}
+As edge computing is extending the boundaries of cloud computing, a lot of concepts and paradigms can be applied to edge computing in an altered way. On top of that, the edge shall become more user-centric and allow an inwards control coming from the edge and not the control from the cloud that has been accepted in recent years with cloud computing.
+
+\subsubsection{Communication}\hspace*{\fill} \\
+Taking into account that edge devices will come in all sizes and therefore limited computational power and battery capacity as well communication will require extra consideration to make it efficient.
+
+Edge devices will enter a state where they will not be reachable for an uncertain time and can’t, therefore, build up a continuous connection to neither other edge devices nor the cloud.
+To counter this weakness peer-to-peer seems to be the most applicable as the basis of edge computing communication. It may has been introduced in 1999 and mostly been associated with illegal activities, but is perfectly capable of scalable and decentralized communication in networks that are physically and logically close-by. \todo{insert reference of paper}
+
+Peer-to-peer is highly tolerant against churn, meaning that a lot of nodes are able to join and leave without drawbacks for the network, which in the case of edge computing is perfect as edge devices can at any point not be reachable for unidentified reasons.
+
+Further on peer-to-peer shall blend together cloud computing and edge computing, by having a stable and decentral communication between edge nodes, but still maintaining a traditional connection to the cloud if additional resources are needed. \todo{insert reference of paper}
+
+
+\subsubsection{Hybrid Architecture}\hspace*{\fill} \\
+This previously mentioned mixture of communication can be used to establish a hybrid architecture. The resources of the edge devices can be complemented with temporary usage of cloud storage services \todo{cite correctly} and will allow to work at a fraction of traditional cloud computing use cases.
+
+Resources provided by peer-to-peer edge networks can be used to build nano data centers, micro clouds or community clouds or edge clouds \todo{cite correctly}. Those soon to be services will become more attractive as soon as a global player like Google, Amazon or Microsoft will offer a managed version of these, but also established telecommunications provider will be able to compete with the global players of cloud computing and might even outdo those as they have already a headstarts through their base stations all over the world.
+
+\subsubsection{Microservices and modularity}\hspace*{\fill} \\
+\todo{not related to any papers, but might be interesting... mostly been used in context with fog computing, but is applicable to edge computing}
+
+\subsubsection{Latency}\hspace*{\fill} \\
+\todo{yet to be defined}
+
+\subsubsection{Scalability}\hspace*{\fill} \\
+A persistent topic in cloud computing, peer-to-peer and therefore edge computing as well will be and always has been scalability.
+Whereas cloud computing had consistent problems with scalability and elasticity, and peer-to-peer overcomplicated everything with churn and dynamism, edge computing will shift these challenges towards new topics.
+
+The problems of peer-to-peer will not be hindering that much anymore as stable cloud resources can be used, but a big challenge will arise as a tradeoff between computing and communication has to be found \todo{cite correctly} and which edge one can trust and which one not.
+
+Scalability will be an ongoing problem in edge computing as the control is now in the edge, but management has yet to be defined and will most probably end up in the cloud.
+
+The biggest challenge in correlation with scalability will be security and finding a proper way to deal with the overhead that will be introduced through encryption to provide secure communication between the edge devices and the cloud.
+
+
+\subsubsection{Dealing with Data Explosion and Network Traffic}\hspace*{\fill} \\
+\todo{reconsider title}
+
+\todo{Data Abstraction}
+\todo{reconsider title}
+
+\subsubsection{The vision of an ideal edge architecture}\hspace*{\fill} \\
+\todo{reconsider title}
+
+\subsection{Privacy \& Security}
 \sidenote{Responsible: Lars}\\
 
-\todo {- Privacy: Personal/Social/Public space in the edge}
-\todo {- Security}
-\sidenote{Responsible: Lars}\\
+\subsubsection{Personal Space in the Edge}\hspace*{\fill} \\
+
+\subsubsection{Social Space in the Edge}\hspace*{\fill} \\
+
+\subsubsection{Public Spaces in the Edge}\hspace*{\fill} \\
+
+\subsubsection{Security}\hspace*{\fill} \\
 
 \todo {- Service Management in the edge of the network: Isolation, Reliability, Differentiation, Extensibility, Orchestration}
 \sidenote{Responsible: Lukas}\\
@@ -15,7 +64,7 @@
 \todo{- Offloading tasks}
 \sidenote{Responsible: Lukas}\\
 
-\todo{- Rapid & cost effective service development: - general purpose computing, - Frameworks & programming models}
+\todo{- Rapid \& cost effective service development: - general purpose computing, - Frameworks \& programming models}
 \sidenote{Responsible: Ula}\\
 
 \todo {- Optional: Quality of Service/Experience}
