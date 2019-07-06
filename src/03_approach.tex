@@ -19,9 +19,6 @@ This previously mentioned mixture of communication can be used to establish a hy
 
 Resources provided by peer-to-peer edge networks can be used to build nano data centers, micro clouds, community clouds or edge clouds \cite{GarciaLopez:2015:ECV:2831347.2831354}. Those soon to be services become more attractive as soon as a global player such as Google, Amazon or Microsoft offer a managed version of these, but also established telecommunications provider are be able to compete with the global players of cloud computing and might even outdo those as they have already a headstarts through their base stations all over the world.
 
-\subsubsection{Microservices and modularity}\hspace*{\fill} \\
-\todo{maybe current state of the art? not related to any papers, but might be interesting... mostly been used in context with fog computing, but is applicable to edge computing}
-
 \subsubsection{Latency}\hspace*{\fill} \\
 One of the strongest arguments for a change in current computational paradigms is latency. The current centralized cloud computing is not able to keep up with the requirements of real-time applications as depending on where it is hosted and the user is located some delay to the messages has to be added.
 Edge computing seems to be the logical next step to be closer to the user and thereby reducing the latency and allowing almost real-time communication with a delay of 25ms to 50ms instead of far above 100ms.
@@ -47,7 +44,7 @@ The biggest challenge in correlation with scalability is security and finding a 
 \subsubsection{Dealing with Data Explosion and Network Traffic}\hspace*{\fill} \begin{figure}[h]
     \centering
     \includegraphics[width=1\textwidth,height=0.8\textwidth]{resources/images/global_iot_devices.png}
-    \caption{Forecast of worldwide connected Internet of Things devices}
+    \caption{Forecast of worldwide connected Internet of Things devices\cite{statista1}}
     \label{fig:global_iot_devices}
 \end{figure}
 
@@ -56,9 +53,10 @@ As can be seen in chart \ref{fig:global_iot_devices} the number of IoT connected
 \begin{figure}[H]
     \centering
     \includegraphics[width=1\textwidth,height=0.8\textwidth]{resources/images/global_traffic.png}
-    \caption{Forecast of worldwide internet traffic}
+    \caption{Forecast of worldwide internet traffic\cite{statista2}}
     \label{fig:global_traffic}
 \end{figure}
+
 
 Looking at the internet traffic presented in chart \ref{fig:global_traffic} the total volume of data traffic per month is expected to be doubled within the next 3 years compared to today.
 
@@ -66,6 +64,11 @@ To harness and actually be able to deal with the amount of data and devices edge
 
 \subsection{Privacy \& Security}
 Privacy and security are both aspects that are thought to be lost with cloud computing and that might be true for the beginning of the cloud era but nowadays a lot of standards got established to ensure a secure connection. Privacy in the cloud remains a highly doubtable concept. Hence, privacy and security are the most important services that should be provided \cite{GarciaLopez:2015:ECV:2831347.2831354}.
+
+\subsubsection{Legal Requirements}\hspace*{\fill} \\
+The Europeans Unions approach to protect its inhabitants by publishing the General Data Protection Regulation (GDPR) puts extra legal constraints on edge computing.
+Cloud data centers have the advantage of being always at the same place and can, therefore, be certified to follow the countries regulation on privacy.
+With edge devices come the uncertainty where personal data might be stored and as GDPR \cite{eu01} demands the transparency this will be a challenge of handling the data in a way that they comply with regulations.
 
 \subsubsection{Personal Space in the Edge}\hspace*{\fill} \\
 The first out of the three visions regarding privacy in the edge.
@@ -101,6 +104,8 @@ Containers are the go-to for running applications in an abstracted but efficient
 
 Traffic, energy, and maintenance cost have to be taken into account depending on data location.
 
+The first approach towards an edge computing service was done by Amazon with their Greengrass\footnote{\url{https://aws.amazon.com/greengrass/}} software. There is still no possibility to rent on-demand edge resources but it is the first step to building such a service by utilizing their software.
+
 \subsubsection{Security}\hspace*{\fill} \\
 The current work done on cloud security can be taken into account as a starting point for edge computing e.g. encrypted data stores, queries over encrypted data or secure end-to-end communication.
 
@@ -110,3 +115,6 @@ One way would be to introduce secure routing between participants, but even this
 With a decentralized system, data fragmentation is inevitable and has to be properly dealt with, meaning secure encryption of those fragments has to be provided.
 
 Important is that every additional layer of security and privacy is going to add additional constraints on the computational resources and might make some edge devices not usable for certain use cases.
+
+While cloud data centers come with high security nowadays, being remote and extra hired security staff, there will be a challenge for edge computing as there is no central place like at cloud computing and this will be a continuous problem to create proper physical security for those devices. 
+Edge devices may be protected by trying to hide those in the natural environment and add extra protective coatings to resist fire or other unforeseen influences. This unknown attack vector makes it difficult to create proper counter measures and time will tell how physical security can be improved.
