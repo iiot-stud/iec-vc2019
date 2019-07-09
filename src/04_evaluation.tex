@@ -14,6 +14,7 @@ Microservices are mostly services that are decoupled from each other and can com
 
 The modularity is meant in a way that those microservices have to split up further to provide more layers which can be enabled and disabled depending on the capabilities of the edge device. For example, an edge device could have a graphical representation by providing a dashboard and collect data, which it shares with a cloud service that saves and offers an aggregated view of different edge devices. The modularity would be that some edge devices may be not powerful enough to offer the graphical representation so this would be turned off and it would solely collect and process data.
 
+\todo{ add industrial part, node sites as factories}
 \subsection{Object Store Service for Edge Computing}
 Confais et al. propose in their paper \cite{8014358} an object store service for fog/edge computing based on IPFS and scale-out NAS.
 The InterPlanetary File System (IPFS) is built on top of the BitTorrent protocol and the Kademlia DHT. IPFS can be seen as a replacement of HTTP while providing better security and bandwidth reduction which are important factors in edge computing.
@@ -21,6 +22,6 @@ The InterPlanetary File System (IPFS) is built on top of the BitTorrent protocol
 IPFS provides the API for the object store service and comes with immutable objects and no duplicates as the cryptographic hash is used \cite{8014358} to identify an object. This gives users the security that a file was not changed by anyone.
 
 The paper states that they used RozoFS\footnote{\url{https://github.com/rozofs/rozofs}} in combination with IPFS to create a scalable and efficient object store service.
-They describe a setup of multiple sites that use edge devices to deliver data with IPFS, RozoFS is used for the file system and DHT saves file location metadata. An edge device receives a new file, creates it in the local NAS and a reference in the DHT. In case an edge device in another site is requested for this file it will be first looked up in the local DHT and if it doesn’t exist yet the DHTs of the other sites are asked for the file. After finding the file it will be saved on the local NAS and is from there on available to the whole edge site.
+They describe a setup of multiple sites that use server nodes to deliver data with IPFS, RozoFS is used for the file system and DHT saves file location metadata. A node receives a new file, creates it in the local NAS and a reference in the DHT. In case an edge device connected to another site has requested this file it will be first looked up in the local DHT and if it doesn’t exist yet the DHTs of the other sites are asked for the file. After finding the file it will be saved on the local NAS and is from there on available to the whole edge site.
 
 It is an interesting concept and could potentially be used as a paid service by one of the currently big cloud providers and has the potential to replace HTTP for good when it comes to data exchange on the internet.
