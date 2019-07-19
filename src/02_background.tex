@@ -1,25 +1,23 @@
 \section{Industrial Edge Computing}\label{sec:background}
-In today's technology and information era, data is a main commodity that generates an important contribution for data-driven businesses in industrial companies. Data are mainly produced at the edge of a network, primarily by edge devices (e.g. smartphones, sensors). In particular, the forecast of 50 billion devices which will be interconnected in the context of the Consumer and Industrial Internet of Things (IoT) by 2020 will lead to a further massive generation of data.\todo{insert reference of paper} These data will be made usable through applications developed at the edge of a network. Nowadays the data used by these applications for processing is mostly stored, analyzed and processed in data centers in a cloud based environment. Especially in an industrial context this can lead to multiple issues and challenges, which are addressed by proposals and research projects under the paradigm "Edge Computing".\par
+In today's technology and information era, data is a main commodity that generates an important contribution for data-driven businesses in industrial companies. Data are mainly produced at the edge of a network, primarily by edge devices (e.g. smartphones, sensors). In particular, the forecast of 50 billion devices which will be interconnected in the context of the Consumer and Industrial Internet of Things (IoT) by 2020 will lead to a further massive generation of data.\todo{insert reference of paper} These data will be made usable through applications developed at the edge of a network. Nowadays the data used by these applications for processing is mostly stored, analyzed and processed in data centers in a cloud based environment. Especially in an industrial context this can lead to multiple issues and challenges, which are addressed by proposals and research projects under the EC paradigm.\par
 In the following sub-chapters, the underlying technological background and the differentiation to other existing computing paradigms will be presented as well as various initiatives and industrial consortia that are currently involved in working on a Edge computing reference architecture and common standards.
 
-\subsection{Technological Background}\label{2.1}
- The massive and rapid increase in the volume of data, resulting in particular from the steadily increasing number of connected IoT devices and applications, leads to massive technical challenges with regard to the amount of data, which will be transferred to the cloud. In the age of digitalization, time-sensitive and location-aware applications (e.g. real-time manufacturing/monitoring, remote assistance) are becoming increasingly important for industrial companies.\todo{insert reference of paper}\par
-In addition to physical bandwidth constraints and the lack of scalability of the data produced by such applications, the transfer of data to the cloud, which is usually far away from a network topological standpoint, cannot meet the low-latency requirements of such applications. The cloud is also not designed to provide location-aware services.\todo{Think about considering aspect: privacy concerns as well?)} To deal with these issues, a modern computing paradigm is needed that acts closer to connected devices. Edge computing is such a paradigm, which shifts the possibilities of computing power, storage, network connection and data management from the cloud closer to the edge of a network, meaning in close proximity to devices, sensors and users.
+\subsection{Background and Problem}\label{2.1}
+The massive and rapid increase in the volume of data, resulting in particular from the steadily increasing number of connected IoT devices and applications, leads to technical challenges with regard to the amount of data, which will be transferred to the cloud. In the age of digitalization, time-sensitive and location-aware applications (e.g. real-time manufacturing/monitoring, remote assistance) are becoming increasingly important for industrial companies.\todo{insert reference of paper}\par
+In addition to physical bandwidth constraints and the lack of scalability of the data produced by such applications, the transfer of data to the cloud, which is usually far away from a network topological standpoint, cannot meet the low-latency requirements of such applications. The cloud is also not designed to provide location-aware services. By also considering privacy concerns, storage and processing data in the could may not be possible due to regulations and industry internal directives.\par
+To deal with these issues, a modern computing paradigm is needed that acts closer to connected devices. Edge computing is such a paradigm, which shifts the possibilities of computing power, storage, network connection and data management from the cloud closer to the edge of a network, meaning in close proximity to devices, sensors and users.
 \todo{insert reference of paper} This leads in particular in the industrial IoT context to substantial benefits in the area of agility, autonomy and real-time processing of data. For an intelligent factory of the future, this is an important prerequisite to open up for innovative and value-adding opportunities.\par 
-In the course of the discussion of this vision, several paradigms have emerged which have been established in cooperation with various industrial consortia and research institutions. In order to obtain an overview of the most important paradigms in the context of this topic and to provide the reader with a clear understanding, the edge and the fog computing paradigm will be explained and differentiated from each other. Also the underlying technical evolution in the context of Industrial IoT from cloud computing to edge computing will also be discussed.
+In the course of the discussion of this vision, several paradigms have emerged which have been established in cooperation with various industrial consortia and research institutions. In order to obtain an overview of the most important paradigms in the context of this topic and to provide the reader with a clear understanding, the edge and the fog computing paradigm will be explained and differentiated from each other. Also the underlying evolution in the industrial context from cloud computing to edge computing will also be discussed.
 
-\subsection{Differentation of Related Computing Paradigms}
-\sidenote{Responsible: Lukas}
-\todo{figure or explain the differences, take also Cloud Computing into consideration.}\\
-\todo{Cloud Computing paradigm to Edge Computing paradigm: No own sub section - in 2.1: describe development from cloud computing paradigm to edge computing paradigm incl. reasons}
-\todo{consistent link to subchapter 2.2}
-
-In the course of the last decade, the cloud computing paradigm opened up new opportunities in data computing and availability. Particularly in the environment of classic enterprise IT infrastructure (mainstream servers and desktop computers), cloud computing created enormous added value for industrial companies because of the possibility of obtaining fluctuating and unpredictable computational demand at low cost (e.g. pay-as-you-go principle) and, on top of that, making the data to be processed available everywhere and for anybody desired.
+\subsection{Differentiation of Related Computing Paradigms}
+In the course of the last decade, the cloud computing paradigm opened up new opportunities in data computing and availability. Particularly in the environment of enterprise IT infrastructure (mainstream servers and desktop computers), cloud computing created enormous added value for industrial companies because of the possibility of obtaining fluctuating and unpredictable computational demand at low cost (e.g. pay-as-you-go principle) and, on top of that, making the data to be processed available everywhere and for anybody desired.
 Due to the increase in the variety and number of end devices through the availability of wearable technology and in particular the strong spread of IoT as an enabler for smart environments (e.g. smart manufacturing), the requirements and scope of computational devices used at the edge of a network have been changed in a way as mentioned in detailed in subchapter \ref{2.1}. These aspects cannot be satisfied by only taking cloud computing into consideration.\todo{insert reference of paper}
-The intention and specification of the mentioned paradigms is different. Table \ref{table:1} compares briefly selected features of cloud and edge computing. Nevertheless, both technologies should not be seen as interchangeable, but rather as interrelated.
-\todo{maybe also consider concept both together --> Edge Clouds - one or two sentences, also mobile edges}
+The intention and specification of the mentioned paradigms is different. Table \ref{table:1} \todo{insert reference} compares briefly selected features of cloud and edge computing. Nevertheless, both technologies should not be seen as interchangeable, but rather as interrelated.
+For this reason, various innovative concepts such as micro datacenter, mobile edges and cloudlets have been introduced in various research projects in addition to cloud computing.
+All mentioned concepts have different characteristics but refer to the overall EC paradigm.
+\todo{maybe refer to paper for every concept}
 
-\begin{table}[h!]
+\begin{table}[h!] 
 \centering
 \begin{tabular}{ |p{2.7cm}|p{4.6cm}|p{4.4cm}|  }
  \hline
@@ -36,17 +34,24 @@ User Device & Only computers, mobile devices & Mobile, smart devices \\
 \caption{Scope of Cloud and Edge Computing}
 \label{table:1}
 \end{table}
-In addition to the Edge Computing Paradigm, the scientific literature also provides another computing paradigm called Fog Computing, which is becoming increasingly important in the course of current researches. 
+In addition to the Cloud Computing paradigm and in particular the Edge Computing paradigm, the scientific literature also provides another computing paradigm called Fog Computing, which is becoming increasingly important in the course of current researches. 
 
-\todo{consider pyramid --> presentation deck --> differentiation paper}
+\todo{consider pyramid --> presentation deck --> differentiation paper - later on down there in current state of the art}
 \todo{also consider paradigms: realtime slides and industry 4.0 slides development paradigms - check out - next steps} --> focus more on industrial edge computing 
 
-\subsection{Standards and initiatives}
+Edge Computing and Fog Computing have the same intention to move storage and computational power to the edge of a network, close to the end nodes. That shows that both Pardigms are interconnected, but not identical in their entirety.
+According to the OpenFog Consortium, Fog Computing differs from Edge Computing by its characteristics. Fog is hierarchically structured and makes computing, networking, storage, control and acceleration available everywhere between cloud and things.
+Edge computing, on the other hand, tends to focus only to computing at the edge. According to an IEEE tutorial article, Fog Computing is composed end-to-end of the Cloud, Core, Metro, Edge, Clients and Things with the goal to realize a continuum of computing services from the cloud to the things, whereas Edge Computing considers only the network edges as an isolated computing platform. \todo{- add hops and fog} \todo{add reference}
+
+In the context of industrial edge computing are no real and comprehensive common standards available so far. Some initiatives and initial standardization approaches currently exist, which are described in the following sub-chapter. 
+
+\subsection{Standards and Initiatives}
 \todo{- check for initiatives/standards/organizations in edge computing}\\
 First research results:\\
 Main existing Edge Computing reference architectures:\\
 - Edge Computing Consortium (https://ecconsortium.eu/)\\ 
 - FAR-Edge Project (https://www.edge4industry.eu/knowledge-base/articles/far-edge-reference-architecture/)\\
 - Industrial Internet Consortium for Industry 4.0\\
+- ETSI is currently producing standards for Multi-Access Edge Computing (MEC), formerly known as Mobile Edge Computing, in collaboration with OpenFog Consortium for MEC API standards\\
 
 Goal: (Common) Edge Computing Reference Architecture
