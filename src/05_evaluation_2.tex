@@ -1,28 +1,20 @@
-\section{Current state of the art}\label{sec:evaluation} 
+\section{Current State of the Art}\label{sec:evaluation} 
 
-\sidenote {Responsible: all}
-\todo {- make/find a figure --> maybe bring pyramid into paper from presentation --> or maybe in conclusion/outlook}
-\todo {- fog computing focus nowadays?, - focus areas?, - comparison to our papers --> updates?, - future issues of engineering?, results/outcomes from current challenges}
-\todo {Result: the scientific surplus value}
-
-There is a big synergy between fog computing and edge computing. Some of the papers that were reviewed briefly mentioned fog computing as a concept next to edge computing, but nowadays the focus relies heavily on fog computing that makes use of edge devices or acts as a layer between edge and cloud.
+There is a big synergy between FC and EC. Some of the papers that were reviewed briefly mentioned FC as a concept next to EC, but nowadays the focus relies heavily on FC that makes use of edge devices or acts as a layer between edge and cloud.
 
 \subsection{Microservices and modularity}
 Microservices have become the state of the art in recent years when it comes to application development, especially in the context of web development.
 
-Microservices are mostly services that are decoupled from each other and can communicate over a language independent interface, so-called API. The so-called Representational State Transfer (REST) API allows creating stateless applications which fit perfectly with the paradigm of edge computing and decentralized services as not one single server has the state of a user/device but rather any as long as a bearer token or something comparable is provided.
+Microservices are mostly services that are decoupled from each other and can communicate over a language independent interface, so-called API. The so-called Representational State Transfer (REST) API allows creating stateless applications which fit perfectly with the paradigm of EC and decentralized services as not one single server has the state of a user/device but rather any as long as a bearer token or something comparable is provided.
 
 The modularity is meant in a way that those microservices have to split up further to provide more layers which can be enabled and disabled depending on the capabilities of the edge device. For example, an edge device could have a graphical representation by providing a dashboard and collect data, which it shares with a cloud service that saves and offers an aggregated view of different edge devices. The modularity would be that some edge devices may be not powerful enough to offer the graphical representation so this would be turned off and it would solely collect and process data.
 
 \subsection{Object Store Service for Edge Computing}
-Confais et al. propose in their paper \cite{8014358} an object store service for fog/edge computing based on IPFS and scale-out NAS.
-The InterPlanetary File System (IPFS) is built on top of the BitTorrent protocol and the Kademlia DHT. IPFS can be seen as a replacement of HTTP while providing better security and bandwidth reduction which are important factors in edge computing.
+Confais et al. propose in their paper \cite{8014358} an object store service for FC/EC based on IPFS and scale-out NAS.
+The InterPlanetary File System (IPFS) is built on top of the BitTorrent protocol and the Kademlia DHT. IPFS can be seen as a replacement of HTTP while providing better security and bandwidth reduction which are important factors in EC.
 
 IPFS provides the API for the object store service and comes with immutable objects and no duplicates as the cryptographic hash is used \cite{8014358} to identify an object. This gives users the security that a file was not changed by anyone.
 
-The paper states that they used RozoFS\footnote{https://github.com/rozofs/rozofs} in combination with IPFS to create a scalable and efficient object store service.
-They describe a setup of multiple sites that use edge devices to deliver data with IPFS, while RozoFS is used for the file system and DHT is used for saving the metadata information of the files. An edge device receives a new file, creates it in the local NAS and a reference in the DHT. In case an edge device in another site is requested for this file it is first looked up on the local scale out NAS and if it doesn’t exist yet the DHTs of the other sites are asked for the file. After finding the file it is saved on the local NAS and is from there on available to the entire edge site.
+The paper states that they used RozoFS\footnote{\url{https://github.com/rozofs/rozofs}} in combination with IPFS to create a scalable and efficient object store service. They describe a setup of multiple sites that use edge devices to deliver data with IPFS, while RozoFS is used for the file system and DHT is used for saving the metadata information of the files. An edge device receives a new file, creates it in the local NAS and a reference in the DHT. In case an edge device in another site is requested for this file it is first looked up on the local scale out NAS and if it doesn’t exist yet the DHTs of the other sites are asked for the file. After finding the file it is saved on the local NAS and is from there on available to the entire edge site.
 
-It is an interesting concept and could potentially be used as a paid service by one of the currently big cloud providers and has the potential to replace HTTP for good when it comes to data exchange on the internet.
-
-In an industrial context, this could be used by factories or companies to host their own object store across multiple factory sites while keeping their data securely within companies borders.
+In general, it could potentially be used as a paid service by one of the currently big cloud providers and has the potential to replace HTTP for good when it comes to data exchange on the internet. In an industrial context, this could be used by factories or companies to host their own object store across multiple factory sites while keeping their data securely within companies borders.
